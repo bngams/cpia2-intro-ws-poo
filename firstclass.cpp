@@ -11,17 +11,18 @@ class Circle {
 class Rectangle {
     int width, height;
   public:
-    Rectangle (int,int);
+    void set_values (int,int);
     int area() {return width*height;}
 };
 
-Rectangle::Rectangle (int x, int y) {
+void Rectangle::set_values (int x, int y) {
   width = x;
   height = y;
 }
 
 int main () {
-  Rectangle rect (3,4);
+  Rectangle rect;
+  rect.set_values(3,4);
   cout << "area: " << rect.area();
   return 0;
 }
